@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>制作词云</title>
+    <link rel="stylesheet" href="../static/css/base.css" type="text/css"/>
+    <link rel="stylesheet" href="../static/css/work.css" type="text/css"/>
+    <link rel="stylesheet" href="../static/css/work_menu.css">
+</head>
+<body>
+<!--顶部结构开始-->
+<div class="top">
+    <p class="wrap">欢迎来到主题词云
+        {% if request.session.is_login %}
+            <span>
+                用户：<em>{{ request.session.user_name }}</em>
+                <a href="/logout/">退出</a>
+            </span>
+        {% else %}
+            <a href="/register/">注册</a>
+            <a href="/login/">登录</a>
+        {% endif %}
+    </p>
+</div>
+<!--顶部结构结束-->
+
+<!--头部结构开始-->
+<header class="wrap">
+    <h1>李白词云</h1>
+    <ul>
+        <li><a href="/index/">主页</a></li>
+        <li><a href="/about/">关于我们</a></li>
+        <li><a href="/instruction/">主题词云</a></li>
+        <li><a href="http://yciyun.com/">开始制作</a></li>
+        <li><a href="/contact/">联系我们</a></li>
+    </ul>
+</header>
+<!--头部结构结束-->
+
+<div class="work_div">
+    <aside>
+        <div class="swanky_wrapper">
+            <input id="Theme" name="radio" type="radio">
+            <label for="Theme">
+                <img src="../static/image/cp.png">
+                <span>主题</span>
+                <div class="lil_arrow"></div>
+                <div class="bar"></div>
+                <div class="swanky_wrapper__content">
+                    <ul>
+                        <li>传统文化主题</li>
+                        <li>生态文明主题</li>
+                        <li>党建主题</li>
+                        <li>自定义主题</li>
+                    </ul>
+                </div>
+            </label>
+            <input id="Sales" name="radio" type="radio">
+            <label for="Sales">
+                <img src="../static/image/del.png">
+                <span>模板</span>
+                <div class="lil_arrow"></div>
+                <div class="bar"></div>
+                <div class="swanky_wrapper__content">
+                    <ul>
+                        <li>主题</li>
+                        <li>文字</li>
+                        <li>上传</li>
+                    </ul>
+                </div>
+            </label>
+            <input id="Style" name="radio" type="radio">
+            <label for="Style">
+                <img src="../static/image/mess.png">
+                <span>样式</span>
+                <div class="lil_arrow"></div>
+                <div class="bar"></div>
+                <div class="swanky_wrapper__content">
+                    <ul>
+                        <li>文字</li>
+                        <li>字体</li>
+                        <li>文字间隔</li>
+                        <li>旋转概率</li>
+                        <li>背景色</li>
+                    </ul>
+                </div>
+            </label>
+            <input id="Download" name="radio" type="radio">
+            <label for="Download">
+                <img src="../static/image/users.png">
+                <span>下载</span>
+                <div class="lil_arrow"></div>
+                <div class="bar"></div>
+                <div class="swanky_wrapper__content">
+                    <ul>
+                        <li>高</li>
+                        <li>中</li>
+                        <li>低</li>
+                    </ul>
+                </div>
+            </label>
+            <input id="Settings" name="radio" type="radio">
+            <label for="Settings">
+                <img src="../static/image/set.png">
+                <span>设置</span>
+                <div class="lil_arrow"></div>
+                <div class="swanky_wrapper__content">
+                    <ul>
+                        <li>用户</li>
+                        <li>退出</li>
+                    </ul>
+                </div>
+            </label>
+        </div>
+    <div id="program">
+        <form name="Form1" method="post" action="http://127.0.0.1:8000/work/w_cloub">
+            <input type="submit" value="提交" id="Botton"/>
+        </form>
+    </div>
+
+    </aside>
+    <main>
+        <div class="cloub_work">
+        </div>
+    </main>
+</div>
+</body>
+</html>

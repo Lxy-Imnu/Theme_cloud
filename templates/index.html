@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>主题词云生成</title>
+    <link href="../static/css/index.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="../static/css/base.css" type="text/css"/>
+</head>
+
+<body>
+<!--顶部结构开始-->
+<div class="top">
+    <p class="wrap">欢迎来到主题词云
+        {% if request.session.is_login %}
+            <span>
+                用户：<em>{{ request.session.user_name }}</em>
+                <a href="/logout/">退出</a>
+            </span>
+        {% else %}
+            <a href="/register/">注册</a>
+            <a href="/login/">登录</a>
+        {% endif %}
+    </p>
+</div>
+<!--顶部结构结束-->
+
+<!--头部结构开始-->
+<header class="wrap">
+    <h1>李白词云</h1>
+    <ul>
+        <li><a href="/index/">主页</a></li>
+        <li><a href="/about/">关于我们</a></li>
+        <li><a href="/instruction/">主题词云</a></li>
+        <li><a href="/work/">开始制作</a></li>
+        <li><a href="/contact/">联系我们</a></li>
+    </ul>
+</header>
+<!--头部结构结束-->
+
+<!--banner结构开始-->
+<div class="banner">
+    <p>欢迎来到主题词云生成网站
+        <span>Welcome to Theme Cloud Generation Website</span>
+    </p>
+</div>
+<!--banner结构结束-->
+
+<!--ad部分结构开始-->
+<div class="ad">
+    <ul class="clearfix">
+        <li><a href="http://www.zhwh365.com/">传统文化<span>Traditional culture</span></a></li>
+        <li><a href="http://www.cecrpa.org.cn/">生态文明<span>Ecological Civilization</span></a></li>
+        <li><a href="http://dangjian.people.com.cn/">党建主题<span>Party Building</span></a></li>
+    </ul>
+</div>
+<!--ad部分结构结束-->
+
+<!--主体部分开始-->
+<div class="wrap clearfix">
+    <!--主体结构开始-->
+    <main>
+        <ul class="imgNews">
+            <li>
+                <a href="http://www.zhwh365.com/article_2858.html">
+                    <h2>浅谈中华传统中医疗法“刮痧”的历史以及发展</h2>
+                    <p>
+                        刮痧是以中华传统中医经络腧穴理论为指导，通过特制的刮痧器具和相应的手法，蘸取一定的介质，在体表进行反复刮动、摩擦，使皮肤局部出现红色粟粒状，或暗红色出血点等“出痧”变化，从而达到活血透痧的作用。</p>
+                </a>
+            </li>
+            <li>
+                <a href="http://www.zhwh365.com/article_2852.html">
+                    <h2>一个被世人遗忘,却又温暖的节日“寒衣节”你了解多少</h2>
+                    <p>
+                        寒衣节，农历十月初一，谓之"十月朝"。我国自古以来就有新收时祭奠祖宗的习俗，以示孝敬，不忘本。古人们也在农历十月初一用黍矐祭祀祖，农历十月初一祭祀祖先，有家祭、也有墓祭，南北方都是如此，今天江南的许多地区，还有十月初一祭新坟的传统习俗。</p>
+                </a>
+            </li>
+            <li>
+                <a href="http://www.zhwh365.com/article_2754.html">
+                    <h2>中国第46个世界遗产项目——京杭大运河</h2>
+                    <p>
+                        真正要达到“学”的层级，课堂必须在第三个层级“问题解决与应用”和第四个层级“思维迁移与创造”中展开学习任务，学生的时间和空间就相对比较大，横坐标上学生的自主性也比较高，就会走到比较高的层级，这才是一个理想状态。</p>
+                </a>
+            </li>
+            <li>
+                <a href="http://www.zhwh365.com/article_2715.html">
+                    <h2>世界第三大无人区——可可西里</h2>
+                    <p>可可西里保护区位于中国青藏高原西北部，面积4.5万平方公里，是世界第三大无人区，也是中国四大无人区之一，因此保留着完全的原始自然状态，成为野生动物的一片乐土。</p>
+                </a>
+            </li>
+        </ul>
+    </main>
+    <!--主体结构结束-->
+
+    <!--侧栏结构开始-->
+    <aside>
+        <h2>相关内容</h2>
+        <ul>
+            <li><a href="#">百家姓词云</a></li>
+            <li><a href="#">党建词云</a></li>
+            <li><a href="#">生态文明</a></li>
+        </ul>
+        <h2>联系我们</h2>
+        <p>呼和浩特和林格尔内师大理工楼A座<br/>
+            电话:15848143095<br/>
+            微信：15848143095<br/>
+            QQ：614469157<br/>
+            Email：614469157@qq.com
+        </p>
+    </aside>
+    <!--侧栏结构结束-->
+</div>
+<!--主体部分结束-->
+</body>
+</html>

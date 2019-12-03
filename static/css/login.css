@@ -1,0 +1,80 @@
+.login_div {
+    width: 100%;
+    height: 600px;
+	background:linear-gradient(#fff 0%,#f1f3f5 100%);
+    padding-top: 100px;
+}
+.login-box {
+    width: 360px;
+    height: 350px;
+    top: 50px;
+    background: #FFFFFF;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+.title {
+    height: 60px;
+    line-height: 60px;
+    border-bottom: #F4F4F4 2px solid;
+    font-size: 26px;
+    text-align: left;
+    color: white;
+    padding: 0 30px;
+    background-color: #417690;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+.title a {
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+    display: block;
+    float: right;
+}
+
+.login_inner {
+    overflow: hidden;
+    padding: 60px 50px;
+    background-color: #FFFFFF;
+}
+
+.login_inner input {
+    display: inline-block;
+    width: 246px;
+    height: 26px;
+    border: 1px solid #d8d8d8;
+    font-size: 14px;
+    color: #666;
+    line-height: 28px;
+    padding: 6px 0 6px 12px;
+    box-shadow: 0 0 5px #fff;
+    outline: none;
+    transition: box-shadow 0.25s linear 0s;
+    -webkit-transition: box-shadow 0.25s linear 0s;
+    margin-bottom: 17px;
+}
+
+.submit_btn input[type="submit"] {
+    height: 45px;
+    width: 260px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    cursor: pointer;
+    background-color: #79aec8;
+    font-size: 22px;
+    color: white;
+}
+.submit_btn input[type="submit"]:hover {
+    background-color: #417690;
+}
+
+.submit_btn span {
+    line-height: 35px;
+}
+
+#errormessage {
+    display: none;
+    color: red;
+}

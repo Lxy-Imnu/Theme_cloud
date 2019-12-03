@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>使用方法</title>
+    <link rel="stylesheet" href="../static/css/base.css" type="text/css"/>
+</head>
+<body>
+<!--顶部结构开始-->
+<div class="top">
+    <p class="wrap">欢迎来到主题词云
+        {% if request.session.is_login %}
+            <span>
+                用户：<em>{{ request.session.user_name }}</em>
+                <a href="/logout/">退出</a>
+            </span>
+        {% else %}
+            <a href="/register/">注册</a>
+            <a href="/login/">登录</a>
+        {% endif %}
+    </p>
+</div>
+<!--顶部结构结束-->
+
+<!--头部结构开始-->
+<header class="wrap">
+    <h1>李白词云</h1>
+    <ul>
+        <li><a href="/index/">主页</a></li>
+        <li><a href="/about/">关于我们</a></li>
+        <li><a href="/instruction/">主题词云</a></li>
+        <li><a href="/work/">开始制作</a></li>
+        <li><a href="/contact/">联系我们</a></li>
+    </ul>
+</header>
+<!--头部结构结束-->
+<h1>这里是词云的使用教程</h1>
+</body>
+</html>

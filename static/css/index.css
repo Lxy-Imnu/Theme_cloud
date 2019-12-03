@@ -1,0 +1,106 @@
+/*banner样式开始*/
+.banner{
+	height:434px;
+	background:url(../image/banner.jpg) no-repeat center;
+	position:relative;}
+.banner:before{
+	content:"";
+	height:10px;
+	background:rgba(0,0,0,0.2);
+	display:block;
+	}
+.banner:after{
+	content:"";
+	height:100px;
+	width:100%;
+	display:block;
+	background:url(../image/zl.png) repeat-x;
+	position:absolute;
+	top:373px;}
+.banner p{
+	font-size:48px;
+	font-family:微软雅黑;
+	text-align:center;
+	height:140px;
+	background:rgba(255,255,255,0.3);
+	padding-top:40px;
+	text-shadow:-1px 1px 0px #fff;
+	position:absolute;
+	top:245px;
+	width:100%;
+	}
+.banner p span{
+	font-size:24px;
+	display:block;
+	color:#4714ae;
+	}
+/*banner样式结束*/
+
+/*ad样式开始*/
+.ad {margin: 39px auto; width: 1080px;}
+.ad ul{width:1080px;}
+.ad li{
+	width:310px; height:107px;
+	background:pink;
+	float:left;
+	margin-right:45px;
+	}
+.ad li a{
+	background:orange;
+	width:280px; height:87px;
+	display:block;
+	color:#FFF;
+	font-size:24px;
+	padding:20px 0 0 30px;
+	box-shadow:-5px 5px 0px #ccc;
+	}
+.ad li span{ display:block; font-size:16px; line-height:30px;}
+.ad li:nth-child(2) a{ background:#00bf5e;}
+.ad li:last-child a{ background:#e62e2e;}
+/*ad样式结束*/
+
+/*主体图文列表样式开始*/
+.imgNews{}
+.imgNews li{ overflow:hidden; margin-bottom:25px;}
+.imgNews li img{
+	float:left;
+	margin-right:20px;
+	}
+.imgNews li h2{
+	font-size:18px;
+	color:#000;
+	font-weight:bold;
+	margin-bottom:10px;
+	}
+.imgNews li p{ 
+	font-size:14px; color:#333333;
+	line-height:25px;}
+/*主体图文列表样式结束*/
+
+/*main样式开始*/
+main{
+	width:670px;
+	float:left;
+	}
+/*main样式结束*/
+
+/*侧栏样式开始*/
+aside{
+	width:265px;
+	background:#f0f0f0;
+	border:#dddee5 solid 1px;
+	float:right;
+	box-shadow:-5px 5px 0px #ccc;
+	padding:20px;
+	}
+aside h2{ color:#c8009e; font-size:18px; font-weight:bold;}
+aside ul{ margin-bottom:20px;}
+aside li{
+	line-height:35px;
+	border-bottom:#ccc dotted 1px;
+	padding-left:15px;
+	background:url(../image/li-bg.png) no-repeat left center;}
+aside li a{}
+aside li a:hover{}
+aside p{ line-height:30px; margin-top:10px;}
+/*侧栏样式结束*/

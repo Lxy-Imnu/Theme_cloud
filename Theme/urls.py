@@ -26,12 +26,9 @@ urlpatterns = [
     path('login/', views.login_views),
     path('logout/', views.logout_views),
     path('register/', views.register),
+    path('index/register/', views.register_success),
     path('about/', views.about),
     path('contact/', views.contact),
     path('instruction/', views.instruction),
     path('work/', views.work),
-    #词云生成
-    #path('work/w_cloub/', views.w_cloub),
-    #验证码
-    url(r'^captcha', include('captcha.urls')),
 ]

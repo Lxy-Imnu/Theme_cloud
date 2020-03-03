@@ -1,99 +1,98 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>联系我们</title>
-    <link rel="stylesheet" href="../static/css/base.css" type="text/css"/>
-    <link href="../static/css/contact.css" rel='stylesheet' type='text/css'/>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <meta name="keywords"
-          content="Pink Contact Form ,Login Forms,Sign up Forms,Registration Forms,News latter Forms,Elements" ./>
-    <script type="application/x-javascript"> addEventListener("load", function () {
-        setTimeout(hideURLbar, 0);
-    }, false);
-
-    function hideURLbar() {
-        window.scrollTo(0, 1);
-    } </script>
-
-    <!--webfonts-->
-    <link href='http://fonts.useso.com/css?family=Lato:100,300,400,700,100italic,300italic,400italic|Lora:400,700,400italic,700italic'
-          rel='stylesheet' type='text/css'>
-    <link href='http://fonts.useso.com/css?family=Raleway:400,200,300,500,600,800,700,900' rel='stylesheet'
-          type='text/css'>
-    <!--//webfonts-->
+    <title>联系我们</title>
+    <link rel="stylesheet" type="text/css" href='{% static "bootstrap-3.3.7-dist/css/bootstrap.min.css" %}'/>
+    <link rel="stylesheet" type="text/css" href='{% static "css/base.css" %}'/>
+    <link rel="stylesheet" type="text/css" href='{% static "css/login.css" %}'/>
+    <link rel="stylesheet" type="text/css" href='{% static "css/register.css" %}'/>
+    <link rel="stylesheet" type="text/css" href='{% static "css/contact.css" %}'/>
+    <script type="text/javascript" src="../static/js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="../static/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 </head>
 <body>
-<!--顶部结构开始-->
-<<div class="top">
-    <p class="wrap">欢迎来到主题词云
-        {% if request.session.is_login %}
-            <span>
-                用户：<em>{{ request.session.user_name }}</em>
-                <a href="/logout/">退出</a>
-            </span>
-        {% else %}
-            <a href="/register/">注册</a>
-            <a href="/login/">登录</a>
-        {% endif %}
-    </p>
-</div>
-<!--顶部结构结束-->
-<!--头部结构开始-->
-<header class="wrap">
-    <h1>李白词云</h1>
-    <ul>
-        <li><a href="/index/">主页</a></li>
-        <li><a href="/about/">关于我们</a></li>
-        <li><a href="/instruction/">主题词云</a></li>
-        <li><a href="http://yciyun.com/">开始制作</a></li>
-        <li><a href="/contact/">联系我们</a></li>
-    </ul>
-</header>
-<!--头部结构结束-->
-<main>
-    <h1>Message Board</h1>
-    <div class="login-01">
-        <form>
-            <ul>
-                <li class="first">
-                    <a href="#" class=" icon user"></a><input type="text" class="text" value="Name"
-                                                              onFocus="this.value = '';"
-                                                              onBlur="if (this.value == '') {this.value = 'Name';}">
-                    <div class="clear"></div>
-                </li>
-                <li class="first">
-                    <a href="#" class=" icon email"></a><input type="text" class="text" value="Email"
-                                                               onFocus="this.value = '';"
-                                                               onBlur="if (this.value == '') {this.value = 'Email';}">
-                    <div class="clear"></div>
-                </li>
-                <li class="first">
-                    <a href="#" class=" icon phone"></a><input type="text" class="text" value="Phone"
-                                                               onFocus="this.value = '';"
-                                                               onBlur="if (this.value == '') {this.value = 'Phone';}">
-                    <div class="clear"></div>
-                </li>
-                <li class="second">
-                    <a href="#" class=" icon msg"></a><textarea value="Message" onFocus="this.value = '';"
-                                                                onBlur="if (this.value == '') {this.value = 'Comments';}">Comments</textarea>
-                    <div class="clear"></div>
-                </li>
-            </ul>
-            <input type="submit" onClick="myFunction()" value="提交">
-            <div class="clear"></div>
-        </form>
-    </div>
-    <!--start-copyright-->
-    <div class="copy-right">
-        <div class="wrap">
-            <p>Copyright &copy; 2015.Company name All rights reserved.<a target="_blank"
-                                                                         href="http://www.cssmoban.com/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a>
-            </p>
-        </div>
-    </div>
-    <!--//end-copyright-->
-</main>
+
+{% include 'header.html' %}
+
+<section id="contact-us">
+    <div class="container">
+        <div class="row">
+
+            <!--section title-->
+            <div class="title text-center wow fadeIn" data-wow-duration="500ms">
+                <h2>Get In <span class="color">Touch</span></h2>
+                <div class="border"></div>
+            </div>
+            <!-- /section title -->
+
+            <!-- Contact Details -->
+            <div class="contact-info col-md-6 wow fadeInUp" data-wow-duration="500ms">
+                <h3 style="font-size: 24px;">联系我们</h3>
+                <p>欢迎来到联系我们，如果你有什么新的想法，新的建议，主题词云网为您提供电话、Email、在线等全方位的联系方式，不论您在国内或者国外，都欢迎您的建议与咨询。</p>
+                <div class="contact-details">
+                    <div class="con-info clearfix ">
+                        <span class="glyphicon glyphicon-home"> 内蒙古师范大学赛罕校区理工楼A810</span>
+                    </div>
+
+                    <div class="con-info clearfix">
+                        <span class="glyphicon glyphicon-phone-alt"> 电话: 15848143083</span>
+                    </div>
+
+                    <div class="con-info clearfix">
+                        <span class="glyphicon glyphicon-earphone"> 手机: 15848143095</span>
+                    </div>
+
+                    <div class="con-info clearfix">
+                        <span class="glyphicon glyphicon-envelope"> 邮件: themecloud2020@163.com</span>
+                    </div>
+                </div>
+            </div>
+            <!-- / End Contact Details -->
+
+            <!-- Contact Form -->
+            <div class="contact-form col-md-6 wow fadeInUp" data-wow-duration="500ms" data-wow-delay="300ms">
+                <form id="contact-form" method="post" action="/contact" role="form">
+
+                    <div class="form-group">
+                        <input type="text" placeholder="您的称呼" class="form-control" name="name" id="name">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="email" placeholder="您的邮件" class="form-control" name="email" id="email">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" placeholder="标题" class="form-control" name="subject" id="subject">
+                    </div>
+
+                    <div class="form-group">
+                        <textarea rows="6" placeholder="消息" class="form-control" name="message" id="message"></textarea>
+                    </div>
+
+                    <div id="mail-success" class="success">
+                        谢谢使用，您的邮件已经成功发送！ :)
+                    </div>
+
+                    <div id="mail-fail" class="error">
+                        对不起，发送过程中出现未知错误，请稍后尝试。 :(
+                    </div>
+
+                    <div id="cf-submit">
+                        <input type="submit" id="contact-submit" class="btn btn-transparent" value="提 交">
+                    </div>
+
+                </form>
+            </div>
+            <!-- ./End Contact Form -->
+
+        </div> <!-- end row -->
+    </div> <!-- end container -->
+</section>
+<!-- end section -->
+
+{% include 'footer.html' %}
+
 </body>
 </html>

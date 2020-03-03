@@ -1,41 +1,34 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>词云制作</title>
-    <link rel="stylesheet" href="../static/css/base.css" type="text/css"/>
-    <link rel="stylesheet" href="../static/css/work.css" type="text/css"/>
-    <link rel="stylesheet" href="../static/css/leftnav.css" media="screen" type="text/css">
+    <link rel="stylesheet" type="text/css" href='{% static "bootstrap-3.3.7-dist/css/bootstrap.min.css" %}'/>
+    <link rel="stylesheet" type="text/css" href="{% static "css/base.css" %}"/>
+    <link rel="stylesheet" type="text/css" href='{% static "css/login.css" %}'/>
+    <link rel="stylesheet" type="text/css" href='{% static "css/register.css" %}'/>
+    <link rel="stylesheet" type="text/css" href='{% static "css/leftnav.css" %}'/>
+    <link rel="stylesheet" type="text/css" href='{% static "css/work.css" %}'/>
+    <script type="text/javascript" src="../static/js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="../static/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 </head>
 <body>
-<!--顶部结构开始-->
-<div class="top">
-    <p class="wrap">欢迎来到主题词云
-        {% if request.session.is_login %}
-            <span>
-                用户：<em>{{ request.session.user_name }}</em>
-                <a href="/logout/">退出</a>
-            </span>
-        {% else %}
-            <a href="/register/">注册</a>
-            <a href="/login/">登录</a>
-        {% endif %}
-    </p>
-</div>
-<!--顶部结构结束-->
 
-<!--头部结构开始-->
-<header class="wrap">
-    <h1>李白词云</h1>
-    <ul>
-        <li><a href="/index/">主页</a></li>
-        <li><a href="/about/">关于我们</a></li>
-        <li><a href="/instruction/">主题词云</a></li>
-        <li><a href="http://yciyun.com/">开始制作</a></li>
-        <li><a href="/contact/">联系我们</a></li>
-    </ul>
-</header>
-<!--头部结构结束-->
+{% include "header.html" %}
+
+<section id="contact-us">
+    <div class="container">
+        <div class="row">
+
+            <!--section title-->
+            <div class="title text-center wow fadeIn" data-wow-duration="500ms">
+                <h2>About <span class="color">us</span></h2>
+                <div class="border"></div>
+            </div>
+            <!-- /section title -->
+</section>
+<!-- end section -->
 
 <div class="work_div">
     <aside>
@@ -99,5 +92,8 @@
         </div>
     </main>
 </div>
+
+{% include "footer.html" %}
+
 </body>
 </html>

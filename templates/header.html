@@ -1,0 +1,105 @@
+<!--头部结构开始-->
+<header>
+    <div class="wrap">
+        <h1>WordCloud</h1>
+        <ul class="nav_header">
+            <li><a href="/index/" id="index">主页</a></li>
+            <li><a href="/about/" id="about">关于我们</a></li>
+            <li><a href="/instruction/" id="instruction">主题词云</a></li>
+            <li><a href="/work/" id="work">开始制作</a></li>
+            <li><a href="/contact/" id="contact">联系我们</a></li>
+        </ul>
+    </div>
+    <!--头部注册登录结构开始-->
+    <div class="right_modal">
+        {% if request.session.is_login %}
+            <span>
+                用户：<em>{{ request.session.user_name }}</em>
+                <a href="/logout/">退出</a>
+            </span>
+        {% else %}
+            <!-- register模态框 -->
+            <button class="register_login" data-toggle="modal" data-target="#register">
+                注册
+            </button>
+            <!-- 模态框（Modal）  注册开始-->
+            <div class="modal fade" id="register" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                 aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                &times;
+                            </button>
+                            <h4 class="modal-title" id="myModalLabel">
+                                用户注册
+                            </h4>
+                            <form class="reg_form" method="post" action="/register/">{% csrf_token %}
+                                <ul>
+                                    <li>
+                                        <label>用户名:</label>
+                                        <input type="text" name="user_name" id="user_name">
+                                        <span class="error_tip">提示信息</span></li>
+                                    <li>
+                                        <label>密码:</label>
+                                        <input type="password" name="pwd" id="pwd">
+                                        <span class="error_tip">提示信息</span></li>
+                                    <li>
+                                        <label>确认密码:</label>
+                                        <input type="password" name="cpwd" id="cpwd">
+                                        <span class="error_tip">提示信息</span></li>
+                                    <li>
+                                        <label>验证码:</label>
+                                        <input class="code" type="text" name="code" id="code">
+                                        <img src="">
+                                        <span class="error_tip">提示信息</span></li>
+                                </ul>
+                                {{ errmsg }}
+                            </form>
+                            <div class="text-center">
+                                <a class="text-left" data-toggle="modal" data-dismiss="modal" data-target="#login">已有账号？点我登录</a>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                                <button type="submit" class="btn btn-primary">注册</button>
+                            </div>
+                        </div>
+
+                    </div><!-- /.modal-content -->
+                </div><!-- /.modal -->
+            </div>
+            <!-- 模态框（Modal） 注册结束-->
+            <!-- login模态框 -->
+            <button class="register_login" data-toggle="modal" data-target="#login">
+                登录
+            </button>
+            <!-- 模态框（Modal） 登录开始 -->
+            <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                 aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                &times;
+                            </button>
+                            <h4 class="modal-title" id="myModalLabel">
+                                欢迎登录
+                            </h4>
+                            <form class="login_form" method="post" action="/login/">{% csrf_token %}
+                                <input id="username" type="text" placeholder="请输入用户名" autocomplete="off">
+                                <input id="password" type="password" placeholder="请输入密码" autocomplete="off">
+                                <div id="errormessage">{{ errmsg }}</div>
+                            </form>
+                            <div class="text-center">
+                                <a class="text-left" data-toggle="modal" data-dismiss="modal" data-target="#register">还没有账号？点我注册</a>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                                <button type="submit" class="btn btn-primary" onclick="login()">登录</button>
+                            </div>
+                        </div>
+                    </div><!-- /.modal-content -->
+                </div><!-- /.modal -->
+            </div>
+            <!-- 模态框（Modal） 登录结束-->
+        {% endif %}
+    </div>
+    <!--头部注册登录结构结束-->
+</header>
+<!--头部结构结束-->

@@ -10,34 +10,8 @@
     <script type="text/javascript" src="../static/js/jquery-3.4.1.min.js"></script>
 </head>
 <body>
-<!--顶部结构开始-->
-<div class="top">
-    <p class="wrap">欢迎来到主题词云
-        {% if request.session.is_login %}
-            <span>
-                用户：<em>{{ request.session.user_name }}</em>
-                <a href="/logout/">退出</a>
-            </span>
-        {% else %}
-            <a href="/register/">注册</a>
-            <a href="/login/">登录</a>
-        {% endif %}
-    </p>
-</div>
-<!--顶部结构结束-->
 
-<!--头部结构开始-->
-<header class="wrap">
-    <h1>李白词云</h1>
-    <ul>
-        <li><a href="/index/">主页</a></li>
-        <li><a href="/about/">关于我们</a></li>
-        <li><a href="/instruction/">主题词云</a></li>
-        <li><a href="/work/">开始制作</a></li>
-        <li><a href="/contact/">联系我们</a></li>
-    </ul>
-</header>
-<!--头部结构结束-->
+{% include 'header.html' %}
 
 <div class="login_div">
     <div class="login-box">
@@ -52,6 +26,9 @@
         </div>
     </div>
 </div>
+
+{% include 'footer.html' %}
+
 </body>
 <script>
      $.ajaxSetup({

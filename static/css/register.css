@@ -1,3 +1,8 @@
+.modal-body {
+    background-color: #2b2c30;
+    color: #dddddd;
+}
+
 .modal-body .reg_form {
     width: 360px;
     height: 280px;
@@ -14,7 +19,6 @@
     line-height: 40px;
     float: left;
     font-size: 14px;
-    color: #a8a8a8
 }
 
 .modal-body .reg_form li input {
@@ -24,17 +28,7 @@
     float: left;
     outline: none;
     text-indent: 10px;
-    background-color: #f8f8f8
-}
-
-.modal-body .reg_form .code{
-    width: 144px;
-    height: 38px;
-    border: 1px solid #e0e0e0;
-    float: left;
-    outline: none;
-    text-indent: 10px;
-    background-color: #f8f8f8
+    color: #000000;
 }
 
 .modal-body .reg_form li.agreement input {

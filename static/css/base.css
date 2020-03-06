@@ -2,7 +2,7 @@
 /* CSS Document */
 
 body {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family:  'Ubuntu', 'Arial', sans-serif;
     /*background-color: #2b2c30;*/
     background-color: #333439;
 }
@@ -43,6 +43,7 @@ a:hover {
 }
 
 /*CSS初始化结束*/
+
 /*头部样式开始*/
 header {
     width: 100%;
@@ -51,6 +52,7 @@ header {
     background-color: #2b2c30;
 }
 
+/*头部标题样式开始*/
 header h1 {
     width: 206px;
     height: 68px;
@@ -61,30 +63,11 @@ header h1 {
     text-indent: -9999px;
 }
 
-header .register_login {
-    display: block;
-    width: 40px;
-    height: 20px;
-    background-color: #2b2c30;
-    border-left: #6cb570 1px solid;
-    border-right: none;
-    border-top: none;
-    border-bottom: none;
-    color: #FFFFFF;
-    font-size: 10px;
-    float: left;
-}
-
-header .register_login:hover {
-    border-bottom: #6cb570 1px solid;
-    border-left: #6cb570 1px solid;
-}
-
-
 header .nav_header {
     padding-left: 500px;
 }
 
+/*头部导航栏样式开始*/
 header .nav_header li {
     float: left;
     line-height: 70px;
@@ -104,18 +87,112 @@ header .nav_header li a:hover {
     text-decoration: none;
 }
 
-/*头部样式结束*/
-/*标题部分*/
-.title {
-    padding-top: 60px;
-    padding-bottom: 60px;
+/*头部右侧模态框按钮样式开始*/
+header .register_login {
+    display: block;
+    width: 40px;
+    height: 20px;
+    background-color: #2b2c30;
+    border-left: #6cb570 1px solid;
+    border-right: none;
+    border-top: none;
+    border-bottom: none;
+    color: #FFFFFF;
+    font-size: 10px;
+    float: left;
 }
 
-.title h2 {
+header .register_login:hover {
+    border-bottom: #6cb570 1px solid;
+    border-left: #6cb570 1px solid;
+}
+
+/*头部右侧模态框按钮样式结束*/
+
+
+/*模态框样式开始*/
+.m-body {
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+    background-color: #2b2c30;
+}
+
+.m-body .m-title {
+    font-size: 24px;
+    color: #dddddd;
+    text-align: left;
+}
+
+.m-body .reg_form {
+    width: 360px;
+    height: 280px;
+    margin: 0 auto;
+}
+
+.m-body .reg_form li {
+    height: 70px;
+}
+
+.m-body .reg_form li label {
+    width: 70px;
+    height: 40px;
+    line-height: 40px;
+    float: left;
+    font-size: 14px;
+}
+
+.m-body .reg_form li input {
+    width: 288px;
+    height: 38px;
+    border: 1px solid #e0e0e0;
+    float: left;
+    outline: none;
+    text-indent: 10px;
+    color: #000000;
+}
+
+.m-body .reg_form li.agreement input {
+    width: 15px;
+    height: 15px;
+    float: left;
+    margin-top: 13px
+}
+
+.m-body .reg_form li.agreement label {
+    width: 300px;
+    float: left;
+    margin-left: 10px;
+}
+
+.m-body #errormessage {
+    float: left;
+    height: 20px;
+    line-height: 20px;
+    color: #e62e2e;
+    display: none;
+}
+
+.m-body .login_form {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    background-color: yellow;
+}
+
+/*模态框样式结束*/
+
+/*头部样式结束*/
+
+
+/*页面标题开始*/
+.title_page h2 {
     text-transform: uppercase;
     font-weight: 700;
     font-size: 38px;
     color: #fff;
+    text-align: center;
+    padding-top: 20px;
 }
 
 .color {
@@ -124,7 +201,7 @@ header .nav_header li a:hover {
 
 .border {
     border-top: 1px solid #fff;
-    height: 1px;
+    height: 60px;
     margin: 15px auto 0;
     position: relative;
     width: 35%;
@@ -141,32 +218,14 @@ header .nav_header li a:hover {
     top: -5px;
     width: 40px;
 }
+/*页面标题结束*/
 
-/**/
-
-/*头部右侧样式开始*/
-header .register_login {
-    display: block;
-    width: 40px;
-    height: 20px;
-    background-color: #2b2c30;
-    border-left: #6cb570 1px solid;
-    border-right: none;
-    border-top: none;
-    border-bottom: none;
-    color: #FFFFFF;
-    font-size: 10px;
-    float: left;
-}
-
-/*头部右侧样式结束*/
 /*底部样式开始*/
 footer {
     width: 100%;
-    height: 100px;
     background-color: #2b2c30;
     margin-top: 60px;
-    padding-top: 15px;
+    padding: 3%;
     color: whitesmoke;
 }
 

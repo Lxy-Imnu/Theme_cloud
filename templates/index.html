@@ -4,10 +4,9 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>主题词云网</title>
+    <link rel="shortcut icon" type="image/x-icon" href='{% static "images/img/favicon.png" %}'>
     <link rel="stylesheet" type="text/css" href='{% static "bootstrap-3.3.7-dist/css/bootstrap.min.css" %}'/>
-    <link rel="stylesheet" type="text/css" href="{% static "css/base.css" %}">
-    <link rel="stylesheet" type="text/css" href='{% static "css/login.css" %}'>
-    <link rel="stylesheet" type="text/css" href='{% static "css/register.css" %}'>
+    <link rel="stylesheet" type="text/css" href='{% static "css/base.css" %}'>
     <link rel="stylesheet" type="text/css" href='{% static "css/index.css" %}'>
     <script type="text/javascript" src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
     <script type="text/javascript" src="{% static 'bootstrap-3.3.7-dist/js/bootstrap.min.js' %}"></script>
@@ -28,23 +27,23 @@
 <!--导入头部结束==================================== -->
 
 <!--主页section开始==================================== -->
-<section id="home" class="bg-one">
+<section id="home">
     <div class="container">
         <div class="row">
 
             <!-- 主页标题 -->
-            <div class="title text-center wow fadeIn" data-wow-duration="1500ms">
+            <div class="title_page">
                 <h2>Home <span class="color">Page</span></h2>
                 <div class="border"></div>
             </div>
             <!-- /主页标题 -->
 
             <!-- 传统文化 -->
-            <div class="col-md-4 text-center wow fadeInUp" data-wow-duration="500ms">
+            <div class="col-md-4 text-center">
                 <div class="wrap-home">
                     <div class="icon-box">
                         <span class="glyphicon glyphicon-cloud"
-                              style="font-size: 60px;color: #f0f0f0;text-shadow: chocolate 5px 3px 3px;"></span>
+                              style="font-size: 60px;color: #f0f0f0;"></span>
                     </div>
                     <!-- 内容 -->
                     <div class="home-page text-center">
@@ -56,11 +55,11 @@
             <!-- /传统文化 -->
 
             <!-- 生态文明 -->
-            <div class="col-md-4 text-center wow fadeInUp" data-wow-duration="500ms" data-wow-delay="250ms">
+            <div class="col-md-4 text-center">
                 <div class="wrap-home">
                     <div class="icon-box">
                         <span class="glyphicon glyphicon-tree-deciduous"
-                              style="font-size: 60px;color: #f0f0f0;text-shadow: green 5px 3px 3px;"></span>
+                              style="font-size: 60px;color: #f0f0f0;"></span>
                     </div>
                     <!-- 内容 -->
                     <div class="home-page text-center">
@@ -72,11 +71,11 @@
             <!-- /生态文明 -->
 
             <!-- 党建主题 -->
-            <div class="col-md-4 text-center wow fadeInUp" data-wow-duration="500ms" data-wow-delay="500ms">
+            <div class="col-md-4 text-center" >
                 <div class="wrap-home kill-margin-bottom">
                     <div class="icon-box">
                         <span class="glyphicon glyphicon-star"
-                              style="font-size: 60px;color: #f0f0f0;text-shadow: red 5px 3px 3px;"></span>
+                              style="font-size: 60px;color: #f0f0f0;"></span>
                     </div>
                     <!-- 内容 -->
                     <div class="home-page text-center">
@@ -200,11 +199,11 @@
                 </div>
             </div>
             <!-- 轮播（Carousel）导航 -->
-            <a class="left" href="#myCarousel" role="button" data-slide="prev">
+            <a class="carousel-control left" href="#myCarousel" role="button" data-slide="prev">
                 <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
                 <span class="sr-only">Previous</span>
             </a>
-            <a class="right" href="#myCarousel" role="button" data-slide="next">
+            <a class="carousel-control right" href="#myCarousel" role="button" data-slide="next">
                 <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
                 <span class="sr-only">Next</span>
             </a>
@@ -217,9 +216,12 @@
     <aside>
         <h2>相关链接</h2>
         <ul>
-            <li><a href="#">传统文化网</a></li>
-            <li><a href="#">党建人民网</a></li>
-            <li><a href="#">生态文明网</a></li>
+            <li><a class="glyphicon glyphicon-cloud" href="https://www.zhwh365.com/"> 传统文化网</a></li>
+            <li><a class="glyphicon glyphicon-cloud" href="http://www.zgctwh.com.cn/"> 中国传统文化网</a></li>
+            <li><a class="glyphicon glyphicon-tree-deciduous" href="http://www.wenming.cn/ll_pd/stwm//"> 生态文明--中国文明网</a></li>
+            <li><a class="glyphicon glyphicon-tree-deciduous" href="http://www.cecrpa.org.cn/"> 中国生态文明网</a></li>
+            <li><a class="glyphicon glyphicon-star" href="http://dangjian.people.com.cn/"> 党建人民网</a></li>
+            <li><a class="glyphicon glyphicon-star" href=" http://www.dangjian.cn/"> 党建网</a></li>
         </ul>
         <a class="index_contact" href="/contact/"><h2>联系我们</h2>
             <p href="/contact/">

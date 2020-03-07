@@ -35,7 +35,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'theme_cloud',
+    'app',
 ]
 
 MIDDLEWARE = [
@@ -81,6 +81,9 @@ DATABASES = {
         'POST': 3306,
     }
 }
+
+#Django认证系统使用的模型类
+AUTH_USER_MODEL='app.User'
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators

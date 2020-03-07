@@ -13,6 +13,10 @@
     height: 38px;
 }
 
+.form-group input{
+    color: #dddddd;
+}
+
 .contact-form input:hover,
 .contact-form textarea:hover {
     border-color: #6CB670;

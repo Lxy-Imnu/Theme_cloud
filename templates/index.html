@@ -1,17 +1,18 @@
-{% load static %}
 <!DOCTYPE html>
 <html lang="en">
+{% load static %}
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>主题词云网</title>
     <link rel="shortcut icon" type="image/x-icon" href='{% static "images/img/favicon.png" %}'>
     <link rel="stylesheet" type="text/css" href='{% static "bootstrap-3.3.7-dist/css/bootstrap.min.css" %}'/>
     <link rel="stylesheet" type="text/css" href='{% static "css/base.css" %}'>
+    <link rel="stylesheet" type="text/css" href=' {% static "css/modal.css" %}'>
     <link rel="stylesheet" type="text/css" href='{% static "css/index.css" %}'>
     <script type="text/javascript" src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
     <script type="text/javascript" src="{% static 'bootstrap-3.3.7-dist/js/bootstrap.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/login.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/register.js' %}"></script>
+    <script type="text/javascript" src="{% static "js/login.js" %}"></script>
+    <script type="text/javascript" src="{% static "js/register.js" %}"></script>
 </head>
 <body>
 <!--页面预加载==================================== -->
@@ -71,7 +72,7 @@
             <!-- /生态文明 -->
 
             <!-- 党建主题 -->
-            <div class="col-md-4 text-center" >
+            <div class="col-md-4 text-center">
                 <div class="wrap-home kill-margin-bottom">
                     <div class="icon-box">
                         <span class="glyphicon glyphicon-star"
@@ -218,7 +219,8 @@
         <ul>
             <li><a class="glyphicon glyphicon-cloud" href="https://www.zhwh365.com/"> 传统文化网</a></li>
             <li><a class="glyphicon glyphicon-cloud" href="http://www.zgctwh.com.cn/"> 中国传统文化网</a></li>
-            <li><a class="glyphicon glyphicon-tree-deciduous" href="http://www.wenming.cn/ll_pd/stwm//"> 生态文明--中国文明网</a></li>
+            <li><a class="glyphicon glyphicon-tree-deciduous" href="http://www.wenming.cn/ll_pd/stwm//"> 生态文明--中国文明网</a>
+            </li>
             <li><a class="glyphicon glyphicon-tree-deciduous" href="http://www.cecrpa.org.cn/"> 中国生态文明网</a></li>
             <li><a class="glyphicon glyphicon-star" href="http://dangjian.people.com.cn/"> 党建人民网</a></li>
             <li><a class="glyphicon glyphicon-star" href=" http://www.dangjian.cn/"> 党建网</a></li>
@@ -245,29 +247,6 @@
 <script type="text/javascript">
     window.onload = function () {
         document.getElementById('loading-mask').style.display = 'none';
-    }
-
-    $.ajaxSetup({
-        data: {csrfmiddlewaretoken: '{{ csrf_token }}'}
-    })
-
-    //点击登录按钮 ，提交数据
-    function login() {
-        let username = document.getElementById("username").value;
-        let password = document.getElementById("password").value;
-        $.ajax({
-            'url': '/login/',
-            'type': 'post',
-            'data': {'username': username, 'password': password},
-            'dataType': 'json',
-            success: function (data) {
-                if (data.res == 1)
-                    location.href = '/index';
-                else {
-                    $('#errormessage').show().html('用户名或密码错误!');
-                }
-            }
-        })
     }
 </script>
 

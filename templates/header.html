@@ -37,27 +37,27 @@
                         <ul>
                             <li>
                                 <label>用户名:</label>
-                                <input type="text" name="user_name" id="user_name">
-                                <span id="errormessage">{{ errmsg }}</span></li>
+                                <input type="text" name="user_name" id="r_username">
+                                <span id="errormessage">提示信息</span></li>
                             <li>
                                 <label>密码:</label>
-                                <input type="password" name="pwd" id="pwd">
-                                <span id="errormessage">{{ errmsg }}</span></li>
+                                <input type="password" name="pwd" id="r_pwd">
+                                <span id="errormessage">提示信息</span></li>
                             <li>
                                 <label>确认密码:</label>
                                 <input type="password" name="cpwd" id="cpwd">
-                                <span id="errormessage">{{ errmsg }}</span></li>
+                                <span id="errormessage">提示信息</span></li>
                             <li>
                                 <label>Emai:</label>
-                                <input type="email" name="eml" id="eml">
-                                <span id="errormessage">{{ errmsg }}</span></li>
+                                <input type="email" name="email" id="email">
+                                <span id="errormessage">提示信息</span></li>
                         </ul>
-                        <span class="error_tip">{{ errmsg }}</span>
+                        <span id="errmsg">提示信息</span>
                     </form>
                     <div class="text-center">
                         <a class="text-left" data-toggle="modal" data-dismiss="modal" data-target="#login">已有账号？点我登录</a>
                         <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                        <button type="submit" class="btn btn-primary">注册</button>
+                        <button type="submit" class="btn btn-primary" onclick="register()">注册</button>
                     </div>
                 </div><!-- /.modal -->
             </div>
@@ -78,9 +78,10 @@
                     </h4>
                     <form class="login_form" method="post" action="/login/">
                         {% csrf_token %}
-                        <input id="username" type="text" placeholder="请输入用户名" autocomplete="off">
-                        <input id="password" type="password" placeholder="请输入密码" autocomplete="off">
-                        <input id="password" type="password" placeholder="请输入验证码" autocomplete="off">
+                        <input id="l_username" type="text" placeholder="请输入用户名" autocomplete="off">
+                        <input id="l_pwd" type="password" placeholder="请输入密码" autocomplete="off">
+                        <input id="code" type="text" placeholder="请输入验证码" autocomplete="off">
+                        <img src="">
                         <span id="errormessage">{{ errmsg }}</span>
                     </form>
                     <div class="text-center">

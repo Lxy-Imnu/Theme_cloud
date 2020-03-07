@@ -17,16 +17,15 @@ from django.contrib import admin
 from django.urls import path
 from django.conf.urls import url
 from django.conf.urls import include
-from theme_cloud import views
+from app import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index),
     path('index/', views.index),
-    path('login/', views.login_views),
+    path('login/',views.login_views),
     path('logout/', views.logout_views),
     path('register/', views.register),
-    path('index/register/', views.register_success),
     path('about/', views.about),
     path('contact/', views.contact),
     path('instruction/', views.instruction),

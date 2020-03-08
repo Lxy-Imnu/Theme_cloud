@@ -1,33 +1,62 @@
 from django.contrib.auth.models import User
 from django.shortcuts import render, redirect
 from django.http import HttpResponse, JsonResponse, HttpResponseRedirect
-from django.template import loader
-
-# Create your views here.
+from django.contrib.auth import authenticate, login
+from django.views.decorators.csrf import csrf_exempt
+from django.views.generic import View
 from django.contrib.auth import authenticate
 from datetime import datetime
 from Theme import settings
 from app import models
+from app.models import User
+
+
+# Create your views here.
+# class RegisterView(View):
+#     def get(self, request):
+#         return render(request, 'index.html')
+#
+#     def post(self, request):
+#         username = request.POST.get('username')
+#         password = request.POST.get('password')
+#         cpassword = request.POST.get('cpwd')
+#         email = request.POST.get('email')
+#         # 校验用户名是否重复
+#         if not all([username, password, cpassword, email]):
+#             return JsonResponse({'res': 2})
+#         try:
+#             user = User.objects.get(username=username)
+#         except User.DoesNotExist:
+#             # 用户名不存在
+#             user = None
+#         if user:
+#             # 用户名已存在
+#             return JsonResponse({'res': 0})
+#         user = User.objects.create_user(username, email, password)
+#         # user.is_active = 0
+#         user.save()
+#         return JsonResponse({'res': 1})
 
 
 def index(request):
     return render(request, 'index.html')
 
 
+@csrf_exempt
 # 注册
 def register(request):
     if request.method == 'GET':
         return render(request, 'index.html')
     else:
-        username = request.POST.get('user_name')
-        password = request.POST.get('pwd')
+        username = request.POST.get('username')
+        password = request.POST.get('password')
         cpassword = request.POST.get('cpwd')
         email = request.POST.get('email')
         # 校验用户名是否重复
-        if not all([username, password]):
+        if not all([username, password, cpassword, email]):
             return JsonResponse({'res': 2})
         try:
-            user = User.objects.get(name=username)
+            user = User.objects.get(username=username)
         except User.DoesNotExist:
             # 用户名不存在
             user = None
@@ -37,7 +66,11 @@ def register(request):
         user = User.objects.create_user(username, email, password)
         # user.is_active = 0
         user.save()
-    return JsonResponse({'res': 1})
+        return JsonResponse({'res': 1})
+
+
+def register_success(request):
+    return render(request, 'register_success.html')
 
 
 # 邮箱验证
@@ -70,6 +103,7 @@ def user_confirm(request):
 # {'res': 1}# 登录成功
 # {'res': 2}# 数据不完整
 # {'res': 3}# 用户未激活
+@csrf_exempt
 def login_views(request):
     if request.session.get('is_login', None):
         return redirect("/index/")
@@ -79,17 +113,21 @@ def login_views(request):
     else:
         username = request.POST.get('username')
         password = request.POST.get('password')
+        code = request.POST.get('code')
         if not all([username, password]):
             return JsonResponse({'res': 2})  # 数据不完整
-        User.objects.get(username=username, password=password)
         user = authenticate(username=username, password=password)
         if user is not None:
             if user.is_active:
+                request.session['is_login'] = True
+                request.session['user_name'] = username
+                login(request, user)
                 return JsonResponse({'res': 1})  # 登录成功
             else:
                 return JsonResponse({'res': 3})  # 用户未激活
         else:
             return JsonResponse({'res': 0})  # 用户名或密码错误
+
 
 def logout_views(request):
     if not request.session.get('is_login', None):

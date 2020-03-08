@@ -3,20 +3,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-
+    <title>注册成功</title>
+    <link rel="shortcut icon" type="image/x-icon" href='{% static "images/img/favicon.png" %}'>
+    <link rel="stylesheet" href='{% static "css/base.css" %}' type="text/css"/>
+    <script type="text/javascript" src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+    <script type="text/javascript" src="{% static "js/register_success.js" %}"></script>
 </head>
-<link rel="stylesheet" href='{% static "css/base.css" %}' type="text/css"/>
-<body>
+
+<body id="bg">
 <h2>用户注册成功！</h2>
+<h3>请到相应邮箱激活，激活后才可以登录</h3>
 <h3 id="sp">3秒后自动跳转到主页。</h3>
 </body>
 <style>
-    body {
-        padding-top: 200px;
-    }
-
     h2 {
+        padding-top: 200px;
         color: #dddddd;
         font-size: 50px;
         text-align: center;
@@ -28,17 +29,3 @@
         text-align: center;
     }
 </style>
-<script type="text/javascript">
-    onload = function () {
-        setInterval(go, 1000);
-    };
-    var x = 3; //利用了全局变量来执行
-    function go() {
-        x--;
-        if (x >= 0) {
-            document.getElementById("sp").innerHTML = x + "秒后自动跳转到主页。"; //每次设置的x的值都不一样了。
-        } else {
-            location.href = '/index/';
-        }
-    }
-</script>

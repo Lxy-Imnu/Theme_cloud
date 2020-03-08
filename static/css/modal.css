@@ -24,14 +24,48 @@ header .register_login:hover {
 /*模态框样式开始*/
 .m-body {
     width: 400px;
-    height: 400px;
-    margin: 0 auto;
+    height: 430px;
+    margin: 10% auto;
+    border: #444549 solid 1px;;
+    border-radius: 5px;
+    padding: 0 20px 0 20px;
+    background-color: white;
 }
 
 .m-body .m-title {
+    padding: 20px;
     font-size: 24px;
-    color: #dddddd;
-    background-color: #212121;
+    color: #6cb570;
+    text-align: left;
+}
+
+input:hover {
+    border: 1px solid #6cb570;
+}
+
+.m-body .btn {
+    display: block;
+    width: 288px;
+    height: 38px;
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    float: left;
+    color: #1f1f1f;
+}
+
+.m-body .btn:hover {
+    background-color: #6cb570;
+    color: #c9e2b3;
+}
+
+.m-body a {
+    display: block;
+    font-size: 14px;
+    float: left;
+    line-height: 40px;
+    width: 70px;
+    height: 40px;
+    color: #5bc0de;
     text-align: left;
 }
 
@@ -39,7 +73,6 @@ header .register_login:hover {
     width: 100%;
     height: 280px;
     margin: 0 auto;
-    background-color: #1f1f1f;
 }
 
 .m-body .reg_form li {
@@ -77,7 +110,7 @@ header .register_login:hover {
     margin-left: 10px;
 }
 
-.m-body #errormessage {
+.m-body #errormessage, #r_errmsg, #l_errmsg {
     float: left;
     height: 20px;
     line-height: 20px;
@@ -87,24 +120,38 @@ header .register_login:hover {
 
 .m-body .login_form {
     width: 300px;
-    height: 300px;
-    margin: 0 auto;
-    background-color: #1f1f1f;
-}
-
-.m-body .login_form {
-    width: 300px;
-    height: 300px;
-    margin: 0 auto;
-    background-color: #1f1f1f;
+    margin: 30px auto;
 }
 
 .m-body .login_form input {
-    width: 250px;
-    height: 40px;
-    border-radius:1px;
-    background-color: #141414;
-    margin-bottom: 20px;
+    width: 300px;
+    height: 50px;
+    border: 1px #666666 solid;
+    margin-bottom: 15px;
+}
+
+#code{
+    width:150px;
+}
+
+.m-body .btn2 {
+    display: block;
+    margin: 0 auto;
+    width: 300px;
+    height: 50px;
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    font-size: 25px;
+    color:  #333439;
+}
+
+.m-body .btn2:hover {
+    background-color: #6cb570;
+    color: #FFFFFF;
+}
+
+.m-body a {
+    color: #5bc0de;
 }
 
 /*模态框样式结束*/

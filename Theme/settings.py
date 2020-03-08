@@ -82,8 +82,8 @@ DATABASES = {
     }
 }
 
-#Django认证系统使用的模型类
-AUTH_USER_MODEL='app.User'
+# Django认证系统使用的模型类
+AUTH_USER_MODEL = 'app.User'
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
@@ -114,7 +114,7 @@ USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = True
+USE_TZ = False
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/

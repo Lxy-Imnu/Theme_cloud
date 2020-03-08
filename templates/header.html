@@ -13,9 +13,9 @@
     <!--头部注册登录结构开始-->
     <div class="right_modal">
         {% if request.session.is_login %}
-            <span>
-                用户：<em>{{ request.session.user_name }}</em>
-                <a href="/logout/">退出</a>
+            <span class="glyphicon glyphicon-user">
+                <em>{{ request.session.user_name }}</em>
+                <a href="/logout/" class="glyphicon glyphicon-remove"></a>
             </span>
         {% else %}
             <!-- register模态框 -->
@@ -32,7 +32,7 @@
                     <h4 class="m-title">
                         用户注册
                     </h4>
-                    <form class="reg_form" method="post" action="/register/">
+                    <form class="reg_form" method="post" action="">
                         {% csrf_token %}
                         <ul>
                             <li>
@@ -48,17 +48,14 @@
                                 <input type="password" name="cpwd" id="cpwd">
                                 <span id="errormessage">提示信息</span></li>
                             <li>
-                                <label>Emai:</label>
+                                <label>Email:</label>
                                 <input type="email" name="email" id="email">
                                 <span id="errormessage">提示信息</span></li>
                         </ul>
-                        <span id="errmsg">提示信息</span>
                     </form>
-                    <div class="text-center">
-                        <a class="text-left" data-toggle="modal" data-dismiss="modal" data-target="#login">已有账号？点我登录</a>
-                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                        <button type="submit" class="btn btn-primary" onclick="register()">注册</button>
-                    </div>
+                    <a class="text-left" data-toggle="modal" data-dismiss="modal" data-target="#login">立即登录</a>
+                    <button type="submit" class="btn btn-primary" onclick="register()">注 册</button>
+                    <span id="r_errmsg">提示信息</span>
                 </div><!-- /.modal -->
             </div>
             <!-- 模态框（Modal） 注册结束-->
@@ -76,20 +73,16 @@
                     <h4 class="m-title">
                         欢迎登录
                     </h4>
-                    <form class="login_form" method="post" action="/login/">
+                    <form class="login_form" method="post" action="">
                         {% csrf_token %}
                         <input id="l_username" type="text" placeholder="请输入用户名" autocomplete="off">
                         <input id="l_pwd" type="password" placeholder="请输入密码" autocomplete="off">
                         <input id="code" type="text" placeholder="请输入验证码" autocomplete="off">
                         <img src="">
-                        <span id="errormessage">{{ errmsg }}</span>
+                         <span id="l_errmsg">提示信息</span>
                     </form>
-                    <div class="text-center">
-                        <a class="text-left" data-toggle="modal" data-dismiss="modal"
-                           data-target="#register">还没有账号？点我注册</a>
-                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                        <button type="submit" class="btn btn-primary" onclick="login()">登录</button>
-                    </div>
+                    <button type="submit" class="btn2 btn-primary" onclick="login()">Sig in</button>
+                    <a class="text-center" data-toggle="modal" data-dismiss="modal" data-target="#register">立即注册</a>
                 </div>
             </div>
             <!-- 模态框（Modal） 登录结束-->

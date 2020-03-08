@@ -126,6 +126,20 @@ header .nav_header li a:hover {
 }
 /*页面标题结束*/
 
+.right_modal span {
+    color: #dddddd;
+}
+.right_modal span em {
+    color: #6CB670;
+}
+.right_modal span a {
+    color: whitesmoke;
+    font-size: 10px;
+}
+.right_modal span a:hover {
+    color: #6CB670;
+}
+
 /*底部样式开始*/
 footer {
     width: 100%;

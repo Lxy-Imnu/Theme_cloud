@@ -13,8 +13,10 @@
     <script type="text/javascript" src="{% static 'bootstrap-3.3.7-dist/js/bootstrap.min.js' %}"></script>
     <script type="text/javascript" src="{% static "js/login.js" %}"></script>
     <script type="text/javascript" src="{% static "js/register.js" %}"></script>
+      <script type="text/javascript" src="{% static "js/index.js" %}"></script>
+
 </head>
-<body>
+<body id="bg">
 <!--页面预加载==================================== -->
 <div id="loading-mask">
     <div class="loading-img">
@@ -244,11 +246,5 @@
 {% include 'footer.html' %}
 
 <!-- end footer -->
-<script type="text/javascript">
-    window.onload = function () {
-        document.getElementById('loading-mask').style.display = 'none';
-    }
-</script>
-
 </body>
 </html>

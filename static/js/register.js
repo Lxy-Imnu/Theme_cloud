@@ -12,7 +12,7 @@ $(function () {
     $('#cpwd').blur(function () {
         check_cpwd();
     });
-    $('#eml').blur(function () {
+    $('#email').blur(function () {
         check_email();
     });
 
@@ -57,11 +57,11 @@ $(function () {
     function check_email() {
         var re = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
         if (re.test($('#email').val())) {
-            $('#email').next().hide()
-            error_name = false;
+            $('#email').next().hide();
+            error_email = false;
         } else {
-            $('#email').next().html('邮箱格式不正确')
-            $('#email').next().show()
+            $('#email').next().html('邮箱格式不正确');
+            $('#email').next().show();
             error_email = true;
         }
     }
@@ -85,7 +85,6 @@ function register() {
     let password = document.getElementById("r_pwd").value;
     let cpwd = document.getElementById("cpwd").value;
     let email = document.getElementById("email").value;
-
     $.ajax(
         {
             'url': '/register/',
@@ -99,11 +98,11 @@ function register() {
             'dataType': 'json',
             success: function (data) {
                 if (data.res == 1)
-                    location.href = '/index';
+                    location.href = '/register_success/';
                 else if (data.res == 2)
-                    $('#errmsg').show().html('数据不完整');
+                    $('#r_errmsg').show().html('数据不完整');
                 else {
-                    $('#errmsg').show().html('该用户名已存在');
+                    $('#r_errmsg').show().html('该用户名已存在');
                 }
             }
         })

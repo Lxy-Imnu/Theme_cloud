@@ -2,7 +2,7 @@
 /* CSS Document */
 
 body {
-    font-family:  'Ubuntu', 'Arial', sans-serif;
+    font-family: 'Ubuntu', 'Arial', sans-serif;
     /*background-color: #2b2c30;*/
     background-color: #333439;
 }
@@ -67,6 +67,11 @@ header .nav_header {
     padding-left: 500px;
 }
 
+.act {
+    background: #333439;
+    font-weight: bold;
+}
+
 /*头部导航栏样式开始*/
 header .nav_header li {
     float: left;
@@ -124,18 +129,22 @@ header .nav_header li a:hover {
     top: -5px;
     width: 40px;
 }
+
 /*页面标题结束*/
 
 .right_modal span {
     color: #dddddd;
 }
+
 .right_modal span em {
     color: #6CB670;
 }
+
 .right_modal span a {
     color: whitesmoke;
     font-size: 10px;
 }
+
 .right_modal span a:hover {
     color: #6CB670;
 }

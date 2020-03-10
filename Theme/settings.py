@@ -122,12 +122,11 @@ USE_TZ = False
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
 
-# EMAIL
-EMAIL_USE_SSL = True
+# EMAIL发送邮件配置
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.163.com'
 EMAIL_PORT = 25
-EMAIL_HOST_USER = 'themecloud@163.com'
-EMAIL_HOST_PASSWORD = 'themecloud'
+EMAIL_HOST_USER = 'themecloud2020@163.com'
+EMAIL_HOST_PASSWORD = 'themecloud2020'
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
-CONFIRM_DAYS = 7
+EMAIL_FROM = '主题词云<themecloud2020@163.com>'

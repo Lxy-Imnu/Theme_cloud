@@ -2,7 +2,7 @@
 <header>
     <div class="wrap">
         <h1>WordCloud</h1>
-        <ul class="nav_header">
+        <ul id="nav_header" class="nav_header">
             <li><a href="/index/" id="index">主页</a></li>
             <li><a href="/about/" id="about">关于我们</a></li>
             <li><a href="/instruction/" id="instruction">主题词云</a></li>
@@ -78,9 +78,15 @@
                         <input id="l_username" type="text" placeholder="请输入用户名" autocomplete="off">
                         <input id="l_pwd" type="password" placeholder="请输入密码" autocomplete="off">
                         <input id="code" type="text" placeholder="请输入验证码" autocomplete="off">
-                        <img src="">
-                         <span id="l_errmsg">提示信息</span>
+                        <img src="/verify_code" onclick="changeImg(this)" class="img">
+                        <span id="l_errmsg">提示信息</span>
                     </form>
+                    <script>
+                        function changeImg(ths) {
+                            // 硬编码
+                            ths.src = '/verify_code/?temp=' + Math.random();
+                        }
+                    </script>
                     <button type="submit" class="btn2 btn-primary" onclick="login()">Sig in</button>
                     <a class="text-center" data-toggle="modal" data-dismiss="modal" data-target="#register">立即注册</a>
                 </div>

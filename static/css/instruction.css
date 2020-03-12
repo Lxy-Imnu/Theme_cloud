@@ -1,0 +1,37 @@
+body {
+    background-color: #2B2C30;
+    font-family: 'Ubuntu', 'Arial', sans-serif;
+    line-height: 1.5;
+    color: #ddd;
+}
+
+#blog-banner {
+    padding-bottom: 100px;
+    padding-top: 150px;
+    color: #ddd;
+}
+
+.blog-icon {
+    border: 1px solid #6CB670;
+    border-radius: 50%;
+    color: #6CB670;
+    display: inline-block;
+    padding: 16px 20px;
+}
+
+.fa-4x {
+    font-size: 4em;
+}
+
+.fa {
+    display: inline-block;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+}
+
+.blog-title h1 {
+    height: 1.1px;
+    color: inherit;
+}

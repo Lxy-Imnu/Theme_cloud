@@ -134,13 +134,14 @@ function register() {
                 'cpwd': cpwd,
                 'email': email
             },
-            'dataType': 'json'
-        }).success(function (data) {
-        if (data.res == 1)
-            location.href = '/register_success/';
-        else if (data.res == 2)
-            $('#r_errmsg').show().html('数据不完整');
-        else
-            $('#r_errmsg').show().html('该用户名已存在');
-    })
+            'dataType': 'json',
+            success: function (data) {
+                if (data.res == 1)
+                    location.href = '/register_success/';
+                else if (data.res == 2)
+                    $('#r_errmsg').show().html('数据不完整');
+                else
+                    $('#r_errmsg').show().html('该用户名已存在');
+            }
+        })
 }

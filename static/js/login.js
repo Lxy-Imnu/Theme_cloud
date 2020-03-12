@@ -46,23 +46,24 @@ function login() {
 
     $.ajax({
         'url': '/login/',
+        'dataType': 'json',
         'type': 'post',
         'data': {
             'username': username,
             'password': password,
             'code': code
         },
-        'dataType': 'json'
-    }).success(function (data) {
-        if (data.res == 0)
-            $('#l_errmsg').show().html('用户名或密码错误!');
-        else if (data.res == 1)
-            location.href = '/index';
-        else if (data.res == 2)
-            $('#l_errmsg').show().html('数据不完整');
-        else if (data.res == 3)
-            $('#l_errmsg').show().html('该用户未激活');
-        else
-            $('#l_errmsg').show().html('验证码错误');
+        success: function (data) {
+            if (data.res == 0)
+                $('#l_errmsg').show().html('用户名或密码错误!');
+            else if (data.res == 1)
+                location.href = '/index';
+            else if (data.res == 2)
+                $('#l_errmsg').show().html('数据不完整');
+            else if (data.res == 3)
+                $('#l_errmsg').show().html('该用户未激活');
+            else
+                $('#l_errmsg').show().html('验证码错误');
+        }
     })
 }

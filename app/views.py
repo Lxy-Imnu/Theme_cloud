@@ -4,10 +4,10 @@ from django.http import HttpResponse, JsonResponse
 from django.contrib.auth import authenticate, login
 from PIL import Image, ImageDraw, ImageFont
 from io import BytesIO
-from random import random
 
 from django.views import View
 from Theme import settings
+from app import models
 from app.models import User
 from django.core.mail import send_mail
 from itsdangerous import TimedJSONWebSignatureSerializer as Serializer
@@ -25,32 +25,6 @@ def index(request):
 # 注册成功反馈页面
 def register_success(request):
     return render(request, 'register_success.html')
-
-
-# 关于我们
-def about(request):
-    return render(request, 'about.html')
-
-
-# 主题词云使用说明书
-def instruction(request):
-    return render(request, 'instruction.html')
-
-
-# 制作词云
-def work(request):
-    return render(request, 'work.html')
-
-
-# 联系我们
-def contact(request):
-    # if request.method == 'POST':
-    #     user = request.POST.get('')
-    #     email = request.POST.get('')
-    #     summary = request.POST.get('')
-    #     message = request.POST.get('')
-    #     time = datetime.now()
-    return render(request, 'contact.html')
 
 
 # class RegisterView(View):
@@ -260,7 +234,7 @@ def login_views(request):
             return JsonResponse({'res': 4})
         user = authenticate(username=username, password=password)
         if user is not None:
-            if user and user.is_active:
+            if user.is_active:
                 login(request, user)
                 request.session['is_login'] = True
                 request.session['user_name'] = username
@@ -268,7 +242,7 @@ def login_views(request):
             else:
                 return JsonResponse({'res': 3})  # 用户未激活
         else:
-            return JsonResponse({'res': 0})  # 用户名或密码错误
+            return JsonResponse({'res': 111111})  # 用户名或密码错误
 
 
 def logout_views(request):
@@ -281,3 +255,40 @@ def logout_views(request):
     # del request.session['user_id']
     # del request.session['user_name']
     return redirect("/index/")
+
+
+# 关于我们
+def about(request):
+    return render(request, 'about.html')
+
+
+# 主题词云使用说明书
+def instruction(request):
+    return render(request, 'instruction.html')
+
+
+# 制作词云
+def work(request):
+    return render(request, 'work.html')
+
+
+# 联系我们
+def contact(request):
+    if request.method == 'GET':
+        return render(request, 'contact.html')
+
+    if request.method == 'POST':
+        msg = models.Message()
+        msg.name = request.POST.get('name')
+        msg.email = request.POST.get('eml')
+        msg.summary = request.POST.get('subject')
+        msg.message = request.POST.get('message')
+        msg.save()
+        subject = '系统收到一封建议'
+        message = ''
+        sender = settings.EMAIL_FROM
+        recipient = [msg.email]
+        html_massage = '<h1>%s，为系统发了一封建议</h1><br/><h2>%s<h2><br/><p>%s</p><br>From: $email%s' % (
+        msg.name, msg.summary, msg.message, msg.email)
+        send_mail(subject, message, sender, recipient, html_message=html_massage)
+        return JsonResponse({'res': 1})

@@ -55,10 +55,15 @@
 
             <!-- Contact Form -->
             <div class="contact-form col-md-6 ">
-                <form id="contact-form" method="post" action="/contact" role="form">
-
+                <form id="contact-form" method="post" action="/contact/" role="form">
+                    {% csrf_token %}
                     <div class="form-group">
-                        <input type="text" placeholder="您的称呼" class="form-control" name="name" id="name">
+                        {% if request.session.is_login %}
+                            <input type="text" value="{{ request.session.user_name }}" class="form-control"
+                                   name="name" id="name">
+                        {% else %}
+                            <input type="text" placeholder="您的称呼" class="form-control" name="name" id="name">
+                        {% endif %}
                     </div>
 
                     <div class="form-group">

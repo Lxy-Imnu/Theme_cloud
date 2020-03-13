@@ -32,71 +32,102 @@
             <!-- /section title -->
         </div>
     </div>
+                <!-- Contact Details -->
+            <div class="work_div">
+                <aside>
+                    <div class="swanky_wrapper">
+                        <input id="Theme" name="radio" type="radio">
+                        <label for="Theme">
+                            <img src="../static/images/img/cp.png">
+                            <span>主题</span>
+                            <div class="lil_arrow"></div>
+                            <div class="bar"></div>
+                            <div class="swanky_wrapper__content">
+                                <ul>
+                                    <li>传统文化主题</li>
+                                    <li>生态文明主题</li>
+                                    <li>党建主题</li>
+                                    <li>自定义主题</li>
+                                </ul>
+                            </div>
+                        </label>
+                        <input id="Sales" name="radio" type="radio">
+                        <label for="Sales">
+                            <img src="../static/images/img/del.png">
+                            <span>模板</span>
+                            <div class="lil_arrow"></div>
+                            <div class="bar"></div>
+                            <div class="swanky_wrapper__content">
+                                <ul>
+                                    <li>主题</li>
+                                    <li>文字</li>
+                                    <li>上传</li>
+                                </ul>
+                            </div>
+                        </label>
+                        <input id="Style" name="radio" type="radio">
+                        <label for="Style">
+                            <img src="../static/images/img/mess.png">
+                            <span>样式</span>
+                            <div class="lil_arrow"></div>
+                            <div class="bar"></div>
+                            <div class="swanky_wrapper__content">
+                                <ul>
+                                    <li>文字</li>
+                                    <li>字体</li>
+                                    <li>文字间隔</li>
+                                    <li>旋转概率</li>
+                                    <li>背景色</li>
+                                </ul>
+                            </div>
+                        </label>
+                        <input id="Download" name="radio" type="radio">
+                        <label for="Download">
+                            <img src="../static/images/img/users.png">
+                            <span>下载</span>
+                            <div class="lil_arrow"></div>
+                            <div class="bar"></div>
+                            <div class="swanky_wrapper__content">
+                                <ul>
+                                    <li>高</li>
+                                    <li>中</li>
+                                    <li>低</li>
+                                </ul>
+                            </div>
+                        </label>
+                        <input id="Settings" name="radio" type="radio">
+                        <label for="Settings">
+                            <img src="../static/images/img/set.png">
+                            <span>设置</span>
+                            <div class="lil_arrow"></div>
+                            <div class="swanky_wrapper__content">
+                                <ul>
+                                    <li>用户</li>
+                                    <li>退出</li>
+                                </ul>
+                            </div>
+                        </label>
+                    </div>
+                    <div id="program">
+                        <form name="Form1" method="post" action="http://127.0.0.1:8000/work/w_cloub">
+                            <input type="submit" value="提交" id="Botton"/>
+                        </form>
+                    </div>
+
+                </aside>
+                <main>
+                    <div class="cloub_work">
+                        <img src="{% static 'dome1.png' %}">
+                    </div>
+                </main>
+            </div>
+            <!-- ./End Contact Form -->
+
+        </div> <!-- end row -->
+    </div> <!-- end container -->
 </section>
 <!-- end section -->
 
-<div class="work_div">
-    <aside>
-        <ul id="accordion" class="accordion">
-            <li>
-                <div class="link"><i class="fa fa-leaf"></i>主题<i class="fa fa-chevron-down"></i></div>
-                <ul class="submenu">
-                    <li id="ecology">生态文明主题</li>
-                    <li id="traditional">传统文化主题</li>
-                    <li id="party_building">党建主题</li>
-                    <li id="custom">自定义主题</li>
-                    <ul class="submenu">
-                        <li>简单编辑</li>
-                        <li>数据表格</li>
-                        <li>词频分析</li>
-                    </ul>
-                </ul>
-            </li>
-            <li>
-                <div class="link"><i class="fa fa-globe"></i>模板<i class="fa fa-chevron-down"></i></div>
-                <ul class="submenu">
-                    <li id="theme_bg">主题
-                        <div>
-                            <ul class="submenu">
-                                <li>生态文明</li>
-                                <li>传统文化</li>
-                                <li>党建</li>
-                                <li>自选模板</li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li id="text_bg">文字
-                        <div>
-                            <ul class="submenu">
-                                <li>输入文字</li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li id="upload">上传</li>
-                </ul>
-            </li>
-            <li>
-                <div class="link"><i class="fa fa-shopping-cart"></i>样式<i class="fa fa-chevron-down"></i></div>
-                <ul class="submenu">
-                    <li id="text">文字</li>
-                    <li id="typeface">字体</li>
-                    <li id="text_spacing">文字间隔</li>
-                    <li id="rotation_probability">旋转概率</li>
-                    <li id="bg_color">背景色</li>
-                </ul>
-            </li>
-            <li>
-                <div class="link"><i class="fa fa-unlock-alt"></i>下载<i class="fa fa-chevron-down"></i></div>
-            </li>
-        </ul>
-        <script type="text/javascript" src="../static/js/jquery-3.4.1.min.js"></script>
-        <script type="text/javascript" src="../static/js/leftnav.js"></script>
-    </aside>
-    <main>
-        <div class="cloub_work">
-        </div>
-    </main>
-</div>
 
 {% include "footer.html" %}
 

@@ -8,124 +8,137 @@
     <link rel="stylesheet" type="text/css" href='{% static "bootstrap-3.3.7-dist/css/bootstrap.min.css" %}'/>
     <link rel="stylesheet" type="text/css" href='{% static "css/base.css" %}'>
     <link rel="stylesheet" type="text/css" href=' {% static "css/modal.css" %}'>
-     <link rel="stylesheet" type="text/css" href='{% static "css/work.css" %}'>
-     <link rel="stylesheet" type="text/css" href='{% static "css/work_menu.css" %}'>
+    <link rel="stylesheet" type="text/css" href='{% static "css/work.css" %}'>
     <script type="text/javascript" src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
     <script type="text/javascript" src="{% static 'bootstrap-3.3.7-dist/js/bootstrap.min.js' %}"></script>
     <script type="text/javascript" src="{% static "js/background.js" %}"></script>
     <script type="text/javascript" src="{% static 'js/menu.js' %}"></script>
-    <script type="text/javascript" src="{% static "js/login.js" %}"></script>
-    <script type="text/javascript" src="{% static "js/register.js" %}"></script>
 </head>
 <body id="bg">
 <!--顶部结构开始-->
 {% include "header.html" %}
 <!--头部结构结束-->
 
-<section id="wordcloud">
+<section id="work_title">
     <div class="container">
         <div class="row">
-
             <!--section title-->
             <div class="title_page">
                 <h2>Word <span class="color">Cloud</span></h2>
                 <div class="border"></div>
             </div>
             <!-- /section title -->
-
-            <!-- Contact Details -->
-            <div class="work_div">
-                <aside>
-                    <div class="swanky_wrapper">
-                        <input id="Theme" name="radio" type="radio">
-                        <label for="Theme">
-                            <img src="../static/images/img/cp.png">
-                            <span>主题</span>
-                            <div class="lil_arrow"></div>
-                            <div class="bar"></div>
-                            <div class="swanky_wrapper__content">
-                                <ul>
-                                    <li>传统文化主题</li>
-                                    <li>生态文明主题</li>
-                                    <li>党建主题</li>
-                                    <li>自定义主题</li>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row clearfix">
+            <div class="col-md-6 column">
+                <div class="panel-group" id="panel-856900">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <a class="panel-title" data-toggle="collapse" data-parent="#panel-856900"
+                               href="#panel-element-1">主题</a>
+                        </div>
+                        <div id="panel-element-1" class="panel-collapse collapse in">
+                            <div class="panel-body">
+                                <ul class="submenu">
+                                    <li id="ecology">生态文明主题</li>
+                                    <li id="traditional">传统文化主题</li>
+                                    <li id="party_building">党建主题</li>
+                                    <li id="custom">自定义主题</li>
+                                    <ul class="submenu">
+                                        <li>简单编辑</li>
+                                        <li>数据表格</li>
+                                        <li>词频分析</li>
+                                    </ul>
                                 </ul>
                             </div>
-                        </label>
-                        <input id="Sales" name="radio" type="radio">
-                        <label for="Sales">
-                            <img src="../static/images/img/del.png">
-                            <span>模板</span>
-                            <div class="lil_arrow"></div>
-                            <div class="bar"></div>
-                            <div class="swanky_wrapper__content">
-                                <ul>
-                                    <li>主题</li>
-                                    <li>文字</li>
-                                    <li>上传</li>
-                                </ul>
-                            </div>
-                        </label>
-                        <input id="Style" name="radio" type="radio">
-                        <label for="Style">
-                            <img src="../static/images/img/mess.png">
-                            <span>样式</span>
-                            <div class="lil_arrow"></div>
-                            <div class="bar"></div>
-                            <div class="swanky_wrapper__content">
-                                <ul>
-                                    <li>文字</li>
-                                    <li>字体</li>
-                                    <li>文字间隔</li>
-                                    <li>旋转概率</li>
-                                    <li>背景色</li>
-                                </ul>
-                            </div>
-                        </label>
-                        <input id="Download" name="radio" type="radio">
-                        <label for="Download">
-                            <img src="../static/images/img/users.png">
-                            <span>下载</span>
-                            <div class="lil_arrow"></div>
-                            <div class="bar"></div>
-                            <div class="swanky_wrapper__content">
-                                <ul>
-                                    <li>高</li>
-                                    <li>中</li>
-                                    <li>低</li>
-                                </ul>
-                            </div>
-                        </label>
-                        <input id="Settings" name="radio" type="radio">
-                        <label for="Settings">
-                            <img src="../static/images/img/set.png">
-                            <span>设置</span>
-                            <div class="lil_arrow"></div>
-                            <div class="swanky_wrapper__content">
-                                <ul>
-                                    <li>用户</li>
-                                    <li>退出</li>
-                                </ul>
-                            </div>
-                        </label>
+                        </div>
                     </div>
-                    <div id="program">
-                        <form name="Form1" method="post" action="http://127.0.0.1:8000/work/w_cloub">
-                            <input type="submit" value="提交" id="Botton"/>
-                        </form>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <a class="panel-title" data-toggle="collapse" data-parent="#panel-856900"
+                               href="#panel-element-2">模板</a>
+                        </div>
+                        <div id="panel-element-2" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <ul class="submenu">
+                                    <li id="theme_bg">主题
+                                        <div>
+                                            <ul class="submenu">
+                                                <li>生态文明</li>
+                                                <li>传统文化</li>
+                                                <li>党建</li>
+                                                <li>自选模板</li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li id="text_bg">文字
+                                        <div>
+                                            <ul class="submenu">
+                                                <li>输入文字</li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li id="upload">上传</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-
-                </aside>
-                <main>
-                    <div class="cloub_work">
-                        <img src="{% static 'dome1.png' %}">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <a class="panel-title" data-toggle="collapse" data-parent="#panel-856900"
+                               href="#panel-element-3">样式</a>
+                        </div>
+                        <div id="panel-element-3" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <ul class="submenu">
+                                    <li id="text">文字</li>
+                                    <li id="typeface">字体</li>
+                                    <li id="text_spacing">文字间隔</li>
+                                    <li id="rotation_probability">旋转概率</li>
+                                    <li id="bg_color">背景色</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                </main>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <a class="panel-title" data-toggle="collapse" data-parent="#panel-856900"
+                               href="#panel-element-4">下载</a>
+                        </div>
+                        <div id="panel-element-4" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <ul class="submenu">
+                                    <li id="theme_bg">主题
+                                        <div>
+                                            <ul class="submenu">
+                                                <li>生态文明</li>
+                                                <li>传统文化</li>
+                                                <li>党建</li>
+                                                <li>自选模板</li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li id="text_bg">文字
+                                        <div>
+                                            <ul class="submenu">
+                                                <li>输入文字</li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li id="upload">上传</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <!-- ./End Contact Form -->
-
-        </div> <!-- end row -->
-    </div> <!-- end container -->
+            <div class="col-md-6 column">
+                <img src="{% static 'dome1.png' %}"/>
+            </div>
+        </div>
+    </div>
 </section>
 <!-- end section -->
 

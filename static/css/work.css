@@ -1,20 +1,20 @@
-.work_div {
+.work {
 	width:96%;
 	height:100%;
 	background-color:#D5D5D5;
 	margin:auto;
 }
-.work_div aside {
+.work aside {
 	width:30%;
 	float: left;
 }
-.work_div main {
+.work main {
 	width:68%;
 	height: 800px;
 	border: black 1px solid;
 	float:right;
 }
-.work_div main .cloub_work{
+.work main .cloub_work{
 	width:80%;
 	height:80%;
 	margin:10% auto;

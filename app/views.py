@@ -13,6 +13,10 @@ from django.core.mail import send_mail
 from itsdangerous import TimedJSONWebSignatureSerializer as Serializer
 from itsdangerous import SignatureExpired
 from django.conf import settings
+from wordcloud import WordCloud
+import PIL.Image as image
+import numpy as np
+import jieba
 
 
 # Create your views here.
@@ -190,7 +194,7 @@ def verify_code(request):
         fill = (random.randrange(0, 255), 255, random.randrange(0, 255))
         draw.point(xy, fill=fill)
     # 定义验证码的备选值
-    str1 = 'ABCD123EFGHIJK456LMNOPQRS789TUVWXYZ0'
+    str1 = 'ABCD123EFGHIJK456LMNOPQRS789TUVWXYZ0qwertyuiopasdfghjklzxcvbnm'
     # 随机选取4个值作为验证码
     rand_str = ''
     for i in range(0, 4):
@@ -269,7 +273,27 @@ def instruction(request):
 
 # 制作词云
 def work(request):
-    return render(request, 'work.html')
+    if request.method == 'GET':
+        return render(request, 'work.html')
+    else:
+        jieba.load_userdict("userdict.txt")
+
+        def trans_CN(text):
+            word_list = jieba.cut(text)
+            # 分词后在单独个体之间加上空格
+            result = " ".join(word_list)
+            return result
+
+        with open("dome.txt", 'r', encoding='UTF-8') as fp:
+            text = fp.read()
+            text = trans_CN(text)
+            mask = np.array(image.open("outline\\6.jpg"))
+            wordcloud = WordCloud(
+                mask=mask,
+                font_path="C:\\Windows\\Fonts\\msyh.ttc"
+            ).generate(text)
+            image_produce = wordcloud.to_image()
+            wordcloud.to_file('dome1.png')
 
 
 # 联系我们
@@ -289,6 +313,6 @@ def contact(request):
         sender = settings.EMAIL_FROM
         recipient = [msg.email]
         html_massage = '<h1>%s，为系统发了一封建议</h1><br/><h2>%s<h2><br/><p>%s</p><br>From: $email%s' % (
-        msg.name, msg.summary, msg.message, msg.email)
+            msg.name, msg.summary, msg.message, msg.email)
         send_mail(subject, message, sender, recipient, html_message=html_massage)
         return JsonResponse({'res': 1})

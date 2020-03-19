@@ -10,5 +10,9 @@ import scrapy
 
 class ThemespiderItem(scrapy.Item):
     # define the fields for your item here like:
-    # name = scrapy.Field()
+    title = scrapy.Field()
+    data = scrapy.Field()
+    summary = scrapy.Field()
+    address = scrapy.Field()
+    href = scrapy.Field()
     pass

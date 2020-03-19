@@ -2,7 +2,7 @@ import requests
 import os
 import re
 from bs4 import BeautifulSoup
-from models import Spider
+import models
 
 
 class CtwhSpider:  # 传统文化网站爬取文章信息
@@ -54,7 +54,7 @@ class CtwhSpider:  # 传统文化网站爬取文章信息
         print(list[0] + "-->文章保存完毕")  # 提示文章下载完毕
 
     def save_mysql(self, list, url):
-        article = Spider()
+        article = models.Spider()
         article.status = 1
         article.title = list[0]
         article.time = list[1]

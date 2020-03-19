@@ -290,7 +290,7 @@ def work(request):
             mask = np.array(image.open("outline\\6.jpg"))
             wordcloud = WordCloud(
                 mask=mask,
-                font_path="C:\\Windows\\Fonts\\msyh.ttc"
+                font_path="static\\fonts\\msyh.ttc"
             ).generate(text)
             image_produce = wordcloud.to_image()
             wordcloud.to_file('dome1.png')

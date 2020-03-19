@@ -32,12 +32,11 @@
     </div>
     <div class="container">
         <div class="row clearfix">
-            <div class="col-md-6 column">
-                <div class="panel-group" id="panel-856900">
+            <div class="col-md-3 column">
+                <div class="panel-group" id="panel-1">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            <a class="panel-title" data-toggle="collapse" data-parent="#panel-856900"
-                               href="#panel-element-1">主题</a>
+                            <a class="panel-title glyphicon glyphicon-th-list text-center" data-toggle="collapse" data-parent="#panel-1" href="#panel-element-1"> 主题</a>
                         </div>
                         <div id="panel-element-1" class="panel-collapse collapse in">
                             <div class="panel-body">
@@ -45,8 +44,8 @@
                                     <li id="ecology">生态文明主题</li>
                                     <li id="traditional">传统文化主题</li>
                                     <li id="party_building">党建主题</li>
-                                    <li id="custom">自定义主题</li>
-                                    <ul class="submenu">
+                                    <li id="custom"><a class="panel-title" data-toggle="collapse" href="#zdy">自定义</a></li>
+                                    <ul id="zdy" class="panel-collapse collapse" >
                                         <li>简单编辑</li>
                                         <li>数据表格</li>
                                         <li>词频分析</li>
@@ -57,8 +56,8 @@
                     </div>
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            <a class="panel-title" data-toggle="collapse" data-parent="#panel-856900"
-                               href="#panel-element-2">模板</a>
+                            <a class="panel-title glyphicon glyphicon-picture text-center" data-toggle="collapse" data-parent="#panel-1"
+                               href="#panel-element-2"> 模板</a>
                         </div>
                         <div id="panel-element-2" class="panel-collapse collapse">
                             <div class="panel-body">
@@ -87,8 +86,8 @@
                     </div>
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            <a class="panel-title" data-toggle="collapse" data-parent="#panel-856900"
-                               href="#panel-element-3">样式</a>
+                            <a class="panel-title glyphicon glyphicon-star-empty text-center" data-toggle="collapse" data-parent="#panel-1"
+                               href="#panel-element-3"> 样式</a>
                         </div>
                         <div id="panel-element-3" class="panel-collapse collapse">
                             <div class="panel-body">
@@ -104,8 +103,8 @@
                     </div>
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            <a class="panel-title" data-toggle="collapse" data-parent="#panel-856900"
-                               href="#panel-element-4">下载</a>
+                            <a class="panel-title glyphicon glyphicon-download text-center" data-toggle="collapse" data-parent="#panel-1"
+                               href="#panel-element-4"> 下载</a>
                         </div>
                         <div id="panel-element-4" class="panel-collapse collapse">
                             <div class="panel-body">
@@ -134,7 +133,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 column">
+            <div class="col-md-9 column text-center">
                 <img src="{% static 'dome1.png' %}"/>
             </div>
         </div>

@@ -36,16 +36,18 @@
                 <div class="panel-group" id="panel-1">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            <a class="panel-title glyphicon glyphicon-th-list text-center" data-toggle="collapse" data-parent="#panel-1" href="#panel-element-1"> 主题</a>
+                            <a class="panel-title glyphicon glyphicon-th-list text-center" data-toggle="collapse"
+                               data-parent="#panel-1" href="#panel-element-1"> 主题</a>
                         </div>
                         <div id="panel-element-1" class="panel-collapse collapse in">
                             <div class="panel-body">
                                 <ul class="submenu">
-                                    <li id="ecology">生态文明主题</li>
-                                    <li id="traditional">传统文化主题</li>
-                                    <li id="party_building">党建主题</li>
-                                    <li id="custom"><a class="panel-title" data-toggle="collapse" href="#zdy">自定义</a></li>
-                                    <ul id="zdy" class="panel-collapse collapse" >
+                                    <li id="ecology" class="panel-title">生态文明主题</li>
+                                    <li id="traditional" class="panel-title">传统文化主题</li>
+                                    <li id="party_building" class="panel-title">党建主题</li>
+                                    <li id="custom" class="panel-title"><a data-toggle="collapse" href="#zdy">自定义</a>
+                                    </li>
+                                    <ul id="zdy" class="panel-collapse collapse">
                                         <li>简单编辑</li>
                                         <li>数据表格</li>
                                         <li>词频分析</li>
@@ -56,29 +58,26 @@
                     </div>
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            <a class="panel-title glyphicon glyphicon-picture text-center" data-toggle="collapse" data-parent="#panel-1"
+                            <a class="panel-title glyphicon glyphicon-picture text-center" data-toggle="collapse"
+                               data-parent="#panel-1"
                                href="#panel-element-2"> 模板</a>
                         </div>
                         <div id="panel-element-2" class="panel-collapse collapse">
                             <div class="panel-body">
                                 <ul class="submenu">
-                                    <li id="theme_bg">主题
-                                        <div>
-                                            <ul class="submenu">
-                                                <li>生态文明</li>
-                                                <li>传统文化</li>
-                                                <li>党建</li>
-                                                <li>自选模板</li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li id="text_bg">文字
-                                        <div>
-                                            <ul class="submenu">
-                                                <li>输入文字</li>
-                                            </ul>
-                                        </div>
-                                    </li>
+                                    <li><a data-toggle="collapse" href="#theme_bg"> 主题</a></li>
+                                    <ul id="theme_bg" class="panel-collapse collapse">
+                                        <li>生态文明</li>
+                                        <li>传统文化</li>
+                                        <li>党建</li>
+                                        <li>自选模板</li>
+                                    </ul>
+                                    <li><a data-toggle="collapse" href="#text_bg"> 文本</a></li>
+                                    <ul id="text_bg" class="panel-collapse collapse">
+                                        <li>输入文字</li>
+                                        <li>字体选择</li>
+                                        <li>字体大小</li>
+                                    </ul>
                                     <li id="upload">上传</li>
                                 </ul>
                             </div>
@@ -86,7 +85,8 @@
                     </div>
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            <a class="panel-title glyphicon glyphicon-star-empty text-center" data-toggle="collapse" data-parent="#panel-1"
+                            <a class="panel-title glyphicon glyphicon-star-empty text-center" data-toggle="collapse"
+                               data-parent="#panel-1"
                                href="#panel-element-3"> 样式</a>
                         </div>
                         <div id="panel-element-3" class="panel-collapse collapse">
@@ -103,32 +103,9 @@
                     </div>
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            <a class="panel-title glyphicon glyphicon-download text-center" data-toggle="collapse" data-parent="#panel-1"
-                               href="#panel-element-4"> 下载</a>
-                        </div>
-                        <div id="panel-element-4" class="panel-collapse collapse">
-                            <div class="panel-body">
-                                <ul class="submenu">
-                                    <li id="theme_bg">主题
-                                        <div>
-                                            <ul class="submenu">
-                                                <li>生态文明</li>
-                                                <li>传统文化</li>
-                                                <li>党建</li>
-                                                <li>自选模板</li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li id="text_bg">文字
-                                        <div>
-                                            <ul class="submenu">
-                                                <li>输入文字</li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li id="upload">上传</li>
-                                </ul>
-                            </div>
+                            <a class="panel-title glyphicon glyphicon-download text-center"
+                               data-parent="#panel-1"
+                               href="#"> 下载</a>
                         </div>
                     </div>
                 </div>
